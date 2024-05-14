@@ -169,6 +169,7 @@ ul {
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .wrapper {
@@ -361,3 +362,62 @@ ul {
   color: var(--red-color);
 }
 /* End Tasks */
+/* Start Latest Uploads */
+.latest-uploads ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.latest-uploads ul li img {
+  width: 40px;
+  height: 40px;
+}
+/* End Latest Uploads */
+/* Start Last Project */
+.last-project ul::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--blue-color);
+}
+.last-project ul li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid white;
+  outline: 2px solid var(--blue-color);
+  margin-right: 15px;
+  z-index: 1;
+}
+@media (min-width: 769px) {
+  .last-project ul li {
+    margin-top: 50px;
+  }
+}
+.last-project ul li.done::before {
+  background-color: var(--blue-color);
+}
+.last-project ul li.current::before {
+  animation: change-color 0.8s infinite alternate;
+}
+.last-project .launch-icon {
+  position: absolute;
+  width: 160px;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+}
+/* End Last Project */
+/* Start Animation */
+@keyframes change-color {
+  from {
+    background-color: var(--blue-color);
+  }
+  to {
+    background-color: white;
+  }
+}
+/* End Animation */
