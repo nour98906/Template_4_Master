@@ -392,7 +392,7 @@ ul {
   margin-right: 15px;
   z-index: 1;
 }
-@media (min-width: 769px) {
+@media (min-width: 769pxd) {
   .last-project ul li {
     margin-top: 50px;
   }
@@ -411,6 +411,38 @@ ul {
   opacity: 0.2;
 }
 /* End Last Project */
+/* Start Reminders */
+.reminders ul li .key {
+  width: 15px;
+  height: 15px;
+}
+.reminders ul li > .blue {
+  border-left: 2px solid var(--blue-color);
+}
+.reminders ul li > .green {
+  border-left: 2px solid var(--green-color);
+}
+.reminders ul li > .orange {
+  border-left: 2px solid var(--orange-color);
+}
+.reminders ul li > .red {
+  border-left: 2px solid var(--red-color);
+}
+/* End Reminders */
+/* Start Latest Post */
+.latest-post .avatar {
+  width: 48px;
+  height: 48px;
+}
+.latest-post .post-content {
+  text-transform: capitalize;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  min-height: 140px;
+  font-weight: 500;
+}
+/* End Latest Post */
 /* Start Animation */
 @keyframes change-color {
   from {
